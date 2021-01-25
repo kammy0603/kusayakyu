@@ -8,7 +8,7 @@
 | nickname             | string   | null: false  |
 | age                  | integer  | null: false  |
 | prefecture_id        | integer  | null: false  |
-| region_id            | integer  | null: false  |
+| city_id              | integer  | null: false  |
 | baseball_term        | integer  | null: false  |
 | achievement          | text     |              |
 | position             | ???      | null: false  |
@@ -52,15 +52,23 @@
 
 ## teams テーブル
 
-| Column          | Type       | Option            |
-| ------          | -------    | -----------       |
-| postal_code     | string     | null: false       |
-| prefecture      | integer    | null: false       |
-| municipalities  | string     | null: false       |
-| address         | string     | null: false       |
-| building_number | string     |                   |
-| phone_number    | string     | null: false       |
-| purchase        | references | foreign_key: true |
+| Column            | Type       | Option       |
+| ------            | -------    | -----------  |
+| image             | ------     | null: false  |
+| name              | string     |              |
+| year              | integer    | null: false  |
+| prefecture_id     | integer    | null: false  |
+| city_id           | integer    | null: false  |
+| average_age       | integer    |              |
+| frequency         | integer    | null: false  |
+| activity date     | integer    | null: false  |
+| achievement       | text       |              |
+| activity location | text       |              |
+| offered position  | ???        | null: false  |
+| hope_level        | integer    | null: false  |
+| member offered    | integer    | null: false  |
+| helper offered    | integer    | null: false  |
+
 
 ### Association
 
@@ -75,6 +83,7 @@
 | ------- | ---------- | ------------------------------ |
 | message | string     |                                |
 | user    | references | null: false, foreign_key: true |
+| team    | references | null: false, foreign_key: true |
 | room    | references | null: false, foreign_key: true |
 
 ### Association
@@ -86,7 +95,7 @@
 ## user_comment テーブル
 | Column       | Type       | Option            |
 | ------       | -------    | -----------       |
-| comment      | string     |                   |
+| comment      | string     | null: false       |
 | user         | references | foreign_key: true |
 
 ### Association
@@ -97,7 +106,7 @@
 ## team_comment テーブル
 | Column       | Type       | Option            |
 | ------       | -------    | -----------       |
-| comment      | string     |                   |
+| comment      | string     | null: false       |
 | team         | references | foreign_key: true |
 
 ### Association
