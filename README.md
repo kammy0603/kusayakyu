@@ -14,7 +14,7 @@
 | position             | ???      | null: false  |
 | level                | integer  | null: false  |
 | hope_frequency       | integer  | null: false  |
-| day_of_hope          | string   |              |
+| day_of_hope          | ???      | null: false  |
 | helpers              | integer  | null: false  |
 | players              | integer  | null: false  |
 | players_registration | integer  | null: false  |
@@ -61,7 +61,7 @@
 | city_id           | integer    | null: false  |
 | average_age       | integer    |              |
 | frequency         | integer    | null: false  |
-| activity date     | integer    | null: false  |
+| activity date     | ???        | null: false  |
 | achievement       | text       |              |
 | activity location | text       |              |
 | offered position  | ???        | null: false  |
@@ -112,4 +112,3 @@
 ### Association
 
 - belongs_to :team
-
