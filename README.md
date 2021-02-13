@@ -5,19 +5,19 @@
 | image                | ------   | null: false  |
 | email                | string   | unique: true null:false|
 | encrypted_password   | string   | null: false  |
-| nickname             | string   | null: false  |
-| age                  | integer  | null: false  |
-| prefecture_id        | integer  | null: false  |
-| city_id              | integer  | null: false  |
+| name                 | string   | null: false  |
+| name_kana            | string   | null: false  |
+| birthday             | date     | null: false  |
+| prefecture           | integer  | null: false  |
+| city                 | integer  | null: false  |
 | baseball_term        | integer  | null: false  |
-| achievement          | text     |              |
-| position             | ???      | null: false  |
 | level                | integer  | null: false  |
 | hope_frequency       | integer  | null: false  |
-| day_of_hope          | ???      | null: false  |
-| helpers              | integer  | null: false  |
-| players              | integer  | null: false  |
 | players_registration | integer  | null: false  |
+| achievement          | text     |              |
+#追加実装
+| position             | ???      | null: false  |
+| day_of_hope          | ???      | null: false  |
 
 ### Association
 
@@ -61,14 +61,14 @@
 | city_id           | integer    | null: false  |
 | average_age       | integer    |              |
 | frequency         | integer    | null: false  |
-| activity date     | ???        | null: false  |
 | achievement       | text       |              |
 | activity location | text       |              |
-| offered position  | ???        | null: false  |
 | hope_level        | integer    | null: false  |
 | member offered    | integer    | null: false  |
 | helper offered    | integer    | null: false  |
-
+#追加実装
+| activity date     | ???        | null: false  |
+| offered position  | ???        | null: false  |
 
 ### Association
 

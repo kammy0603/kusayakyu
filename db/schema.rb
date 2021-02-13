@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_12_112507) do
+ActiveRecord::Schema.define(version: 2021_02_13_130656) do
 
   create_table "teams", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
@@ -25,6 +25,16 @@ ActiveRecord::Schema.define(version: 2021_02_12_112507) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "name"
+    t.string "name_kana"
+    t.date "birthday"
+    t.integer "prefecture"
+    t.integer "city"
+    t.integer "baseball_term"
+    t.integer "level"
+    t.integer "hope_frequency"
+    t.integer "players_registration"
+    t.date "achievement"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
