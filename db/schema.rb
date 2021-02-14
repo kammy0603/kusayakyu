@@ -28,13 +28,13 @@ ActiveRecord::Schema.define(version: 2021_02_13_130656) do
     t.string "name"
     t.string "name_kana"
     t.date "birthday"
-    t.integer "prefecture"
-    t.integer "city"
-    t.integer "baseball_term"
-    t.integer "level"
-    t.integer "hope_frequency"
-    t.integer "players_registration"
-    t.date "achievement"
+    t.integer "term_id"
+    t.integer "level_id"
+    t.integer "frequency_id"
+    t.integer "registration_id"
+    t.integer "prefecture_id"
+    t.string "city"
+    t.string "achievement"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

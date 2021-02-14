@@ -57,7 +57,7 @@
 | image             | ------     | null: false  |
 | name              | string     |              |
 | year              | integer    | null: false  |
-| prefecture_id     | integer    | null: false  |
+| prefecture        | integer    | null: false  |
 | city_id           | integer    | null: false  |
 | average_age       | integer    |              |
 | frequency         | integer    | null: false  |
