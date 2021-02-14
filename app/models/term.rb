@@ -6,10 +6,9 @@ class Term < ActiveHash::Base
     { id: 4, name: '高校野球' },
     { id: 5, name: '中学野球' },
     { id: 6, name: '趣味程度' },
-    { id: 7, name: '初心者' },
+    { id: 7, name: '初心者' }
   ]
 
   include ActiveHash::Associations
   has_many :users
-  
-  end
+end

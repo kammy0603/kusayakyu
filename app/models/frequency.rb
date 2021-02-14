@@ -6,8 +6,8 @@ class Frequency < ActiveHash::Base
     { id: 4, name: '週1回' },
     { id: 5, name: '2週に1回' },
     { id: 6, name: '1ヶ月に1回' },
-    { id: 7, name: '3ヶ月月に1回' },
+    { id: 7, name: '3ヶ月月に1回' }
   ]
   include ActiveHash::Associations
   has_many :users
-  end
+end

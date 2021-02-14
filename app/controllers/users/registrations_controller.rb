@@ -1,5 +1,4 @@
 class Users::RegistrationsController < Devise::RegistrationsController
-
   def new
     @user = User.new
   end
@@ -16,7 +15,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   private
 
   def user_params
-    params.require(:user).permit(:name,:name_kana,:birthday,:term_id,:level_id,:frequency_id,:registration_id,:prefecture_id,:city,:achievement)
+    params.require(:user).permit(:name, :name_kana, :birthday, :term_id, :level_id, :frequency_id, :registration_id, :prefecture_id,
+                                 :city, :achievement)
   end
-  
 end
