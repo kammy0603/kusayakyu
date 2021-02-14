@@ -18,4 +18,9 @@ class Users::RegistrationsController < Devise::RegistrationsController
     params.require(:user).permit(:name, :name_kana, :birthday, :term_id, :level_id, :frequency_id, :registration_id, :prefecture_id,
                                  :city, :achievement)
   end
+
+  def image_params
+    params.require(:user).permit(:image).merge(user_id: current_user.id)
+  end
+
 end
