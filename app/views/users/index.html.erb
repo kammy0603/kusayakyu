@@ -1,0 +1,22 @@
+<h1>
+  商品検索
+</h1>
+<%= search_form_for @p, url: users_search_path do |f| %>
+  <%= f.label :term_id_eq, '野球歴' %>
+  <%= f.collection_select :term_id_eq, User.select("term_id").distinct, :id, :term_id,  include_blank: '指定なし' %>
+  <br>
+  <%= f.submit '検索' %>
+   <br>
+  <%# 商品一覧 %>
+  <% @users.each do |user| %>
+  <td>
+  <br>
+  <li>
+    <%= user.name %>
+    <%= user.term_id %>
+    <%= user.level_id %>
+    <%= user.frequency_id %>
+    <%= user.prefecture.name %>
+  </li>
+  <% end %>
+<% end %>
