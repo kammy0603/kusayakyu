@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
-  belongs_to :prefecture, :baseball_term, :level, :hope_frequency, :players_registration
+  belongs_to :prefecture, :term, :level, :frequency, :registration
   has_one_attached :image
 
   devise :database_authenticatable, :registerable,
