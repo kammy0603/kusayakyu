@@ -12,6 +12,7 @@ class User < ApplicationRecord
   with_options presence: true, format: { with: /\A[ァ-ヶ]+\z/, message: '全角カナ文字を使用してください' } do
     validates :name_kana
   end
+  validates :image, presence: true
   validates :birthday, presence: true
   validates :prefecture_id, presence: true
   validates :city, presence: true
