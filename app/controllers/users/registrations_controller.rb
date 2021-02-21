@@ -22,5 +22,4 @@ class Users::RegistrationsController < Devise::RegistrationsController
   def image_params
     params.require(:user).permit(:image).merge(user_id: current_user.id)
   end
-
 end

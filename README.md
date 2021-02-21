@@ -44,22 +44,21 @@ belongs_to :room
 
 -------teams テーブル---------------------------------
 Column	          Type	Option
-image	            ------	null: false
-name	            string	
+image	            ------	
+name	            string	null: false
 year	            integer	null: false
-prefecture_id	    integer	null: false
-city_id	          integer	null: false
-average_age	      integer	
-frequency	        integer	null: false
+prefecture  	    integer	null: false #共通
+average   	      integer	null: false 
+frequency	        integer	null: false #共通
+level     	      integer	null: false #共通
+offer         	  integer	null: false
 achievement	      text	
-activity location	text	
-hope_level	      integer	null: false
-member offered	  integer	null: false
-helper offered	  integer	null: false
+location	        text	
 
 #追加実装		
-activitydate	    ???	    null: false
+activity_date	    ???	    null: false
 position	        ???	    null: false
+city_id	          integer	null: false
 
 Association
 has_many :rooms, through: room_users
