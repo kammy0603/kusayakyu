@@ -3,6 +3,7 @@ before_action :search_term_id, only: [:index, :search]
 
   def index
     @users = User.all
+    @user = User.where(category_id: params[:id]).order('created_at DESC')
   end
 
   def search
@@ -15,7 +16,7 @@ before_action :search_term_id, only: [:index, :search]
   end
 
   def set_user_column
-    @term_id = Term.select("term_id").distinct  # 重複なくterm_idカラムのデータを取り出す
+    @user_term_id = User.select("term_id").distinct  # 重複なくnameカラムのデータを取り出す
   end
 
 end
