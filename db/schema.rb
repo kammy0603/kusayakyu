@@ -35,12 +35,12 @@ ActiveRecord::Schema.define(version: 2021_02_14_065601) do
 
   create_table "teams", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "teamname", null: false
-    t.integer "prefecture", null: false
+    t.integer "prefecture_id", null: false
     t.integer "year", null: false
-    t.integer "age", null: false
-    t.integer "frequency", null: false
-    t.integer "level", null: false
-    t.integer "offer", null: false
+    t.integer "age_id", null: false
+    t.integer "frequency_id", null: false
+    t.integer "level_id", null: false
+    t.integer "offer_id", null: false
     t.string "achievement", null: false
     t.string "location", null: false
     t.datetime "created_at", precision: 6, null: false

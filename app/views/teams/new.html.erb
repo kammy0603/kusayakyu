@@ -5,7 +5,7 @@
   </header>
   <div class="items-sell-main">
     <h2 class="items-sell-title">チームの情報を入力</h2>
-    <%= form_with model: @item, url: teams_new_path, local: true do |f| %>
+    <%= form_with(model: @team, local: true) do |f| %>
 
     <% if @team.errors.any? %>
     <%= render 'shared/error_messages', model: f.object %>
@@ -20,7 +20,7 @@
         <p>
           クリックしてファイルをアップロード
         </p>
-        <%= f.file_field :image, id:"item-image" %>
+        <%= f.file_field :teamimage, id:"item-image" %>
       </div>
     </div>
 
@@ -29,7 +29,7 @@
         チーム名
         <span class="indispensable">必須</span>
       </div>
-      <%= f.text_area :name, class:"items-text", id:"item-name", placeholder:"商品名（必須 40文字まで)", maxlength:"40" %>
+      <%= f.text_area :teamname, class:"items-text", id:"item-name", placeholder:"商品名（必須 40文字まで)", maxlength:"40" %>
     </div>
     <div class="new-items">
       <div class="weight-bold-text">
@@ -44,7 +44,7 @@
           活動中の都道府県
           <span class="indispensable">必須</span>
         </div>
-        <%= f.collection_select(:prefecture, Prefecture.all, :id, :name, {}, {class:"select-box", id:"item-prefecture"}) %>
+        <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"select-box", id:"item-prefecture"}) %>
         <div class="weight-bold-text">
           創立年度
           <span class="indispensable">必須</span>
@@ -54,22 +54,22 @@
           メンバーの平均年齢
           <span class="indispensable">必須</span>
         </div>
-        <%= f.collection_select(:age, Age.all, :id, :name, {}, {class:"select-box", id:"item-prefecture"}) %>
+        <%= f.collection_select(:age_id, Age.all, :id, :name, {}, {class:"select-box", id:"item-prefecture"}) %>
         <div class="weight-bold-text">
           活動頻度
           <span class="indispensable">必須</span>
         </div>
-        <%= f.collection_select(:frequency, Frequency.all, :id, :name, {}, {class:"select-box", id:"item-prefecture"}) %>
+        <%= f.collection_select(:frequency_id, Frequency.all, :id, :name, {}, {class:"select-box", id:"item-prefecture"}) %>
         <div class="weight-bold-text">
           要求する野球レベル
           <span class="indispensable">必須</span>
         </div>
-        <%= f.collection_select(:level, Level.all, :id, :name, {}, {class:"select-box", id:"item-prefecture"}) %>
+        <%= f.collection_select(:level_id, Level.all, :id, :name, {}, {class:"select-box", id:"item-prefecture"}) %>
         <div class="weight-bold-text">
           メンバー募集有無
           <span class="indispensable">必須</span>
         </div>
-        <%= f.collection_select(:offer, Offer.all, :id, :name, {}, {class:"select-box", id:"item-prefecture"}) %>
+        <%= f.collection_select(:offer_id, Offer.all, :id, :name, {}, {class:"select-box", id:"item-prefecture"}) %>
       </div>
       
       <div class='form-text-wrap'>

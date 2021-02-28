@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :search_term_id, only: [:index, :search]
+  before_action :search_user, only: [:index, :search]
 
   def index
     @users = User.all
@@ -12,7 +12,7 @@ class UsersController < ApplicationController
 
   private
 
-  def search_term_id
+  def search_user
     @p = User.ransack(params[:q])
   end
 
