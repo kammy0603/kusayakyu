@@ -7,12 +7,11 @@
     <td>
     <br>
     <li>
-      <%= image_tag result.avatar , class: "user-img" %>
       <%= result.name %>
-      <%= result.term.name %>
-      <%= result.level.name %>
-      <%= result.frequency.name %>
-      <%= result.prefecture.name %>
+      <%= result.term_id %>
+      <%= result.level_id %>
+      <%= result.frequency_id %>
+      <%= result.prefecture_id %>
     </li>
   <% end %>
 <% else %>

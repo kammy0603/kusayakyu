@@ -17,7 +17,6 @@
   <% @users.each do |user| %>
   <td>
   <br>
-  <%= link_to user_path(user.id), method: :get, class: 'user_derail' do %>
   <li class="member-index">
     <%= image_tag user.avatar , class: "item-img" %>
     <%= user.name %>
@@ -26,6 +25,5 @@
     <%= user.frequency.name %>
     <%= user.prefecture.name %>
   </li>
-    <% end%>
   <% end %>
 <% end %>
