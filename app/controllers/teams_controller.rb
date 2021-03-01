@@ -13,6 +13,10 @@ class TeamsController < ApplicationController
     end
   end
 
+  def show
+    @team = Team.find(params[:id])
+  end
+
   def list
     @teams = Team.all
   end
