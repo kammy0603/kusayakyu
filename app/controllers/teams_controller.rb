@@ -13,16 +13,25 @@ class TeamsController < ApplicationController
     end
   end
 
-  def show
-    @team = Team.find(params[:id])
-  end
-
   def list
     @teams = Team.all
   end
 
   def search
     @results = @p.result
+  end
+
+  def show
+    @team = Team.find(params[:id])
+  end
+
+  def edit
+    @team = Team.find(params[:id])
+  end
+
+  def update
+    team = Team.find(params[:id])
+    team.update(team_params)
   end
 
   private

@@ -10,6 +10,9 @@
     </div>
     <div class="item-price-box">
     </div>
+    <%= link_to '商品の編集', edit_team_path(@team.id), method: :get, class: "item-red-btn" %>
+      <p class='or-text'>or</p>
+    <%= button_to '削除', "/teams/#{@team.id}", method: :delete, class:'item-destroy' %>
 
     <div class="item-explain-box">
       <span><%= "メンバー詳細" %></span>
