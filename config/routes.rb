@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   get 'users/index'
   get 'users/search'
+  get 'teams/list'
+  get 'teams/search'
   post 'teams/new'
   devise_for :users, :controllers => {
     :registrations => 'users/registrations',
