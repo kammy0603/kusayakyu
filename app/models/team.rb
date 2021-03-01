@@ -12,8 +12,8 @@ class Team < ApplicationRecord
   end
 
   with_options presence: true do
-  validates :teamimage, :teamname, :prefecture_id, :age_id, :frequency_id, :level_id, :offer_id
-  end 
+    validates :teamimage, :teamname, :prefecture_id, :age_id, :frequency_id, :level_id, :offer_id
+  end
 
   validates :prefecture_id, :age_id, :frequency_id, :level_id, :offer_id, numericality: { other_than: 1 }
 end
