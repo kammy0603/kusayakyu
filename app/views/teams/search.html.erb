@@ -7,16 +7,16 @@
     <td>
     <br>
     <li>
-      <%= image_tag result.avatar , class: "user-img" %>
-      <%= result.name %>
-      <%= result.term.name %>
-      <%= result.level.name %>
-      <%= result.frequency.name %>
+      <%= image_tag result.teamimage , class: "team-img" %>
+      <%= result.teamname %>
       <%= result.prefecture.name %>
+      <%= result.age.name %>
+      <%= result.frequency.name %>
+      <%= result.level.name %>
     </li>
   <% end %>
 <% else %>
-  該当する商品はありません
+  該当するチームはありません
 <% end %>
 <br>
 <%= link_to 'トップページへ戻る', root_path %>
