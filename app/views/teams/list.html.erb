@@ -15,6 +15,8 @@
    <br>
   <%# 商品一覧 %>
   <% @teams.each do |team| %>
+  <div class='list'>
+  <%= link_to team_path(team.id) , method: :get do %>
   <td>
   <br>
   <li class="member-index">
@@ -25,5 +27,7 @@
     <%= team.frequency.name %>
     <%= team.level.name %>
   </li>
+    <% end %>
+  </div>
   <% end %>
 <% end %>
