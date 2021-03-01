@@ -10,10 +10,6 @@ class UsersController < ApplicationController
     @results = @p.result
   end
 
-  def show
-    @user = User.find(params[:id])
-  end
-
   private
 
   def search_user
