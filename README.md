@@ -68,7 +68,7 @@ has_many :user_comments
 
 messages テーブル--------------------------------
 Column	Type	      Options
-message	string	
+content	string	
 user	  references	null: false, foreign_key: true
 team	  references	null: false, foreign_key: true
 room	  references	null: false, foreign_key: true
