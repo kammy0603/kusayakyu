@@ -9,9 +9,10 @@ Rails.application.routes.draw do
     :registrations => 'users/registrations',
     :sessions => 'users/sessions'
    }
+  root to: "teams#index"
   resources :users
   resources :teams
-  resources :messages
-  root to: "teams#index"
-
+  resources :rooms do
+    resources :messages
+  end
 end

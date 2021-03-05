@@ -27,7 +27,7 @@ has_many :user_comments
 Column	    Type	      Options
 name	      string	    null: false
 user	      references	null: false, foreign_key: true
-room	      references	null: false, foreign_key: true
+team	      references	null: false, foreign_key: true
 
 Association
 belongs_to :user
