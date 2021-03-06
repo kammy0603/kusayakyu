@@ -31,7 +31,11 @@ class TeamsController < ApplicationController
 
   def update
     team = Team.find(params[:id])
-    team.update(team_params)
+    if team.update(team_params)
+       redirect_to root_path
+    else
+      render :update
+    end
   end
 
   private

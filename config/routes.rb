@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'messages/index'
   get 'users/index'
   get 'users/search'
   get 'teams/list'
@@ -8,8 +9,11 @@ Rails.application.routes.draw do
     :registrations => 'users/registrations',
     :sessions => 'users/sessions'
    }
-  resources :users
-  resources :teams
   root to: "teams#index"
-
+  resources :users do
+    resources :teams
+  end
+  resources :rooms do
+    resources :messages
+  end
 end

@@ -11,7 +11,7 @@
 .form-wrap {
   width: 50%;
   background-color: white;
-  padding-bottom: 70px;
+  padding-bottom: 200px;
 }
 
 .form-header {
@@ -115,6 +115,35 @@
   padding: 0 5px;
 }
 
+.weight-bold-text {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.items-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-start;
+  padding-left: 170px;
+}
+
+.select-box {
+  height: 40px;
+  width: 320px;
+  background-color: #f5f5f5;
+  padding-left: 20px;
+}
+
+.selectblock {
+  height: 100px;
+  background-color: white;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
 .field_with_errors {
   display: contents;
 }
@@ -173,28 +202,22 @@
   padding-right: 140px;
 }
 
-.weight-bold-text {
-  font-weight: bold;
-  min-width: 170px;
-  margin-top: 30px;
-  padding-left: 0px;
-  font-size: 14px;
+.click-upload {
+  margin-top: -15px;
+  margin-left: 170px;
 }
 
-.items-detail {
+.form-group2 {
+  width: 50%;
   display: flex;
-  justify-content:flex-start;
-  padding-left: 170px;
+  flex-direction: column;
+  margin: 0 auto;
+  padding-top: 410px;
 }
 
-.items-detail>.form {
-  width: 300px;
-  padding-left: 1vh 0;
+.weight-bold-text2 {
+  font-weight: bold;
+  font-size: 14px;
+  margin-left:170px ;
 }
 
-.select-box {
-  height: 30px;
-  width: 100%;
-  background-color: #f5f5f5;
-  padding-left: 20px;
-}

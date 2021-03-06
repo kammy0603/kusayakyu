@@ -16,7 +16,7 @@
   <%# 商品一覧 %>
   <% @teams.each do |team| %>
   <div class='list'>
-  <%= link_to team_path(team.id) , method: :get do %>
+  <%= link_to user_team_path(team.id) , method: :get do %>
   <td>
   <br>
   <li class="member-index">

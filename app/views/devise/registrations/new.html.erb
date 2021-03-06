@@ -10,7 +10,7 @@
   <%= render 'shared/error_messages', model: f.object %>    
   <% end %>
   <div class="img-upload">
-    <div class="weight-bold-text">
+    <div class="weight-bold-text2">
       登録画像
       <span class="indispensable">必須</span>
     </div>
@@ -89,40 +89,49 @@
                   "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
     </div>
   </div>
-
   <div class="items-detail">
       <div class="form">
       <%= form_with(model: @user, url:new_user_registration_path, local: true) do |f| %>
+      <div class="selectblock">
         <div class="weight-bold-text">
           野球歴
           <span class="indispensable">必須</span>
         </div>
         <%= f.collection_select(:term_id, Term.all, :id, :name, {}, {class:"select-box", id:"item-scheduled-delivery"}) %>
+      </div>
+      <div class="selectblock">
         <div class="weight-bold-text">
           希望する野球レベル
           <span class="indispensable">必須</span>
         </div>
         <%= f.collection_select(:level_id, Level.all, :id, :name, {}, {class:"select-box", id:"item-shipping-fee-status"}) %>
+      </div>
+      <div class="selectblock">
         <div class="weight-bold-text">
           希望活動頻度
           <span class="indispensable">必須</span>
         </div>
         <%= f.collection_select(:frequency_id, Frequency.all, :id, :name, {}, {class:"select-box", id:"item-shipping-fee-status"}) %>
+      </div>
+      <div class="selectblock">
         <div class="weight-bold-text">
           選手登録希望
           <span class="indispensable">必須</span>
         </div>
         <%= f.collection_select(:registration_id, Registration.all, :id, :name, {}, {class:"select-box", id:"item-shipping-fee-status"}) %>
+      </div>
+      <div class="selectblock">
         <div class="weight-bold-text">
           お住まいの都道府県
           <span class="indispensable">必須</span>
         </div>
         <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"select-box", id:"item-shipping-fee-status"}) %>
       </div>
+      </div>
     </div>
     <% end %>
 
-  <div class="form-group">
+  <div class="form-group2">
     <div class='form-text-wrap'>
         <label class="form-text">市区町村</label>
         <span class="indispensable">必須</span>
