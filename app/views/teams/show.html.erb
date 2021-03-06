@@ -10,7 +10,7 @@
     </div>
     <div class="item-price-box">
     </div>
-    <%= link_to '商品の編集', edit_team_path(@team.id), method: :get, class: "item-red-btn" %>
+    <%= link_to '商品の編集', edit_user_(@team.id), method: :get, class: "item-red-btn" %>
       <p class='or-text'>or</p>
     <%= button_to '削除', "/teams/#{@team.id}", method: :delete, class:'item-destroy' %>
 
@@ -34,6 +34,18 @@
         <tr>
           <th class="detail-item">希望するレベル</th>
           <td class="detail-value"><%= @team.level.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">戦績</th>
+          <td class="detail-value"><%= @team.achievement %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">活動場所</th>
+          <td class="detail-value"><%= @team.location %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">チーム連絡先</th>
+          <td class="detail-value"><%= @team.location %></td>
         </tr>
       </tbody>
     </table>
