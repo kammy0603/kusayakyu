@@ -2,7 +2,7 @@ class Team < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   has_many :rooms
   has_many :messages
-  has_many :teams
+  belongs_to :user
   
   belongs_to :prefecture
   belongs_to :age
