@@ -2,32 +2,62 @@
   チーム検索
 </h1>
 <%= search_form_for @p, url: teams_search_path do |f| %>
+<div class="search-form">
+  <div class="search-group">
+   <div class="search-block">
+     <div class="search-content">
   <%= f.label :prefecture_id_eq, '活動中の都道府県' %>
   <%= f.collection_select :prefecture_id_eq, Prefecture.all, :id, :name,  include_blank: '指定なし' %>
+    </div>
+    <div class="search-content">
     <%= f.label :age_id_eq, 'メンバーの平均年齢' %>
   <%= f.collection_select :age_id_eq, Age.all, :id, :name,  include_blank: '指定なし' %>
+    </div>
+   </div>
+   <div class="search-block">
+    <div class="search-content">
     <%= f.label :frequency_id_eq, '希望活動頻度' %>
-  <%= f.collection_select :frequency_id_eq, Frequency.all, :id, :name,  include_blank: '指定なし' %>
+    <%= f.collection_select :frequency_id_eq, Frequency.all, :id, :name,  include_blank: '指定なし' %>
+    </div>
+    <div class="search-content">
     <%= f.label :level_id_eq, '希望するレベル' %>
   <%= f.collection_select :level_id_eq, Level.all, :id, :name,  include_blank: '指定なし' %>
-  <br>
+    </div>
+    </div>
+  </div>
+  <div class="search-button">
   <%= f.submit '検索' %>
-   <br>
-  <%# 商品一覧 %>
+  </div>
+</div>
+
+  <div class="sub-title">検索一覧</div>
+  <div class="list-index">
   <% @teams.each do |team| %>
   <div class='list'>
-  <%= link_to user_team_path(team.id) , method: :get do %>
-  <td>
-  <br>
+  <%= link_to team_path(team.id) , method: :get do %>
+
   <li class="member-index">
     <%= image_tag team.teamimage , class: "item-img" %>
+    <div class="member-group">
+      <div class="member-detail">
     <%= team.teamname %>
+      </div>
+      <div class="member-detail">
     <%= team.prefecture.name %>
+      </div>
+      <div class="member-detail">
     <%= team.age.name %>
+      </div>
+      <div class="member-detail">
     <%= team.frequency.name %>
+      </div>
+      <div class="member-detail">
     <%= team.level.name %>
-  </li>
+      </div>
+    </div>
+  </div>
     <% end %>
   </div>
   <% end %>
+  </div>
 <% end %>
