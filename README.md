@@ -2,18 +2,18 @@ users テーブル-----------------------------------------
 
 Column	Type	Options---------------------------------
 image	                ------  null: false
-email	　　　　　　　　   string	 unique: true null:false
+email	                string	null: false unique: true
 encrypted_password	  string	null: false
 name	                string	null: false
 name_kana	            string	null: false
 birthday	            date	  null: false
-prefecture	          integer	null: false
+term_id               integer	null: false
+level_id              integer	null: false
+frequency_id          integer	null: false
+registration_id       integer	null: false
+prefecture_id	        integer	null: false
 city	                integer	null: false
-baseball_term	        integer	null: false
-level	                integer	null: false
-hope_frequency	      integer	null: false
-players_registration	integer	null: false
-achievement	          text	
+achievement	          text
 #追加実装		
 position	???	null: false
 day_of_hope	???	null: false
@@ -44,14 +44,14 @@ belongs_to :room
 
 -------teams テーブル---------------------------------
 Column	          Type	Option
-image	            ------	
-name	            string	null: false
+image	            ------	null: false
+teamname	        string	null: false
 year	            integer	null: false
-prefecture  	    integer	null: false #共通
-average   	      integer	null: false 
-frequency	        integer	null: false #共通
-level     	      integer	null: false #共通
-offer         	  integer	null: false
+prefecture_id  	  integer	null: false #共通
+age_id     	      integer	null: false 
+frequency_id      integer	null: false #共通
+level_id   	      integer	null: false #共通
+offer_id       	  integer	null: false
 achievement	      text	
 location	        text	
 

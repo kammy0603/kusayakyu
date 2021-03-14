@@ -25,6 +25,7 @@ a {
 
 .service-title {
   font-size: 8vh;
+  color: #fff;
 }
 
 .service-explain {
@@ -109,7 +110,7 @@ a {
   font-weight: bold;
   font-size: 24px;
   line-height: 50px;
-  margin-top: 5px;
+  margin-top: 50px;
 }
 
 .reason-list-blue-text {
@@ -168,7 +169,7 @@ a {
 
 /* FURIMAの特徴 */
 .feature-contents {
-  padding: 5vh 15vw;
+  padding: 25vh 15vw 0vh 15vw
 }
 
 .feature-contents>.title {
@@ -177,6 +178,7 @@ a {
   font-weight: bold;
   margin-bottom: 5vh;
   position: relative;
+  margin-left: 100px;
 }
 
 .feature-contents>.title::after {
@@ -194,6 +196,7 @@ a {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  margin-left: 75px;
 }
 
 .feature-lists>.list {
@@ -210,7 +213,8 @@ a {
   display: flex;
   align-items: center;
   padding: 60px 60px;
-  
+  color: black;
+  text-decoration: none;
 }
 
 .list2 {

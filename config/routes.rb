@@ -10,9 +10,8 @@ Rails.application.routes.draw do
     :sessions => 'users/sessions'
    }
   root to: "teams#index"
-  resources :users do
-    resources :teams
-  end
+  resources :users
+  resources :teams
   resources :rooms do
     resources :messages
   end

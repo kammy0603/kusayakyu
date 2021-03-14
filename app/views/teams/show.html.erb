@@ -10,7 +10,7 @@
     </div>
     <div class="item-price-box">
     </div>
-    <%= link_to '商品の編集', edit_user_(@team.id), method: :get, class: "item-red-btn" %>
+    <%= link_to '商品の編集', edit_team_path(@team.id), method: :get, class: "item-red-btn" %>
       <p class='or-text'>or</p>
     <%= button_to '削除', "/teams/#{@team.id}", method: :delete, class:'item-destroy' %>
 
@@ -74,10 +74,10 @@
   </div>
   <div class="links">
     <a href="#" class="change-item-btn">
-      ＜ 前の商品
+      ＜ 前のチーム
     </a>
     <a href="#" class="change-item-btn">
-      後ろの商品 ＞
+      次のチーム ＞
     </a>
   </div>
 </div>

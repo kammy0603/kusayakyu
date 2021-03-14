@@ -1,21 +1,36 @@
-<h1>
+<h1 class="title">
   検索結果
 </h1>
+<div class="result">
 <% if @results.length !=0 %>
   <% @results.each do |result| %>
-  <%= image_tag result.teamimage%>
+  <div class='list'>
+  <%= image_tag result.teamimage, class: "item-img"%>
     <td>
     <br>
-    <li>
+    <li class="member-index">
+      <div class="menmber-detail">
       <%= result.teamname %>
+      </div>
+      <div class="menmber-detail">
       <%= result.prefecture.name %>
+      </div>
+      <div class="menmber-detail">
       <%= result.age.name %>
+      </div>
+      <div class="menmber-detail">
       <%= result.frequency.name %>
+      </div>
+      <div class="menmber-detail">
       <%= result.level.name %>
+      </div>
     </li>
+  </div>
   <% end %>
 <% else %>
   該当する商品はありません
 <% end %>
-<br>
-<%= link_to 'トップページへ戻る', root_path %>
+
+<div class="top-back">
+<%= link_to 'トップページへ戻る', root_path%>
+</div>
