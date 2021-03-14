@@ -44,11 +44,14 @@
           <td class="detail-value"><%= @team.location %></td>
         </tr>
         <tr>
-          <th class="detail-item">チーム連絡先</th>
-          <td class="detail-value"><%= @team.location %></td>
+          <th class="detail-item">チーム連絡代表者</th>
+          <td class="detail-value"><%= @team.user %></td>
         </tr>
       </tbody>
     </table>
+    <div class="contact">
+      <%= link_to '代表者にチャットする', "", method: :get, class: "contact-btn" %>
+    </div>
     <div class="option">
       <div class="favorite-btn">
         <%= image_tag "" ,class:"favorite-star-icon" ,width:"20",height:"20"%>
